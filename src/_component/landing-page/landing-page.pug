@@ -17,5 +17,5 @@
     ul.landing-page__social
       each social, key in socialList
         li.landing-page__social-item
-          label.landing-page__social-label(for=``)
-          span(class=`my-cv__icon--${social.icon}`)
+          label.landing-page__social-label(for=`message-box-id-${key}`)
+            span(class=`my-cv__icon--${social.icon}`)
