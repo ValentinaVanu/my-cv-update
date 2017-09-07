@@ -1,9 +1,21 @@
 -
   var fullName = 'Valentina G Vanu';
   var jobTitle = 'Front End Developer';
+  var socialList= [
+      {icon: 'facebook2', url: 'http://facebook.com/valentinavanu'},
+      {icon: 'github', url: 'https://github.com/ValentinaVanu'},
+      {icon: 'linkedin', url: 'https://www.linkedin.com/in/valentina-vanu-a63034148/'},
+      {icon: 'earth', url: 'http://bitbee.uk'},
+      {icon: 'skype', url: 'skype:valentinavanu?call'}
+    ]
 
 #landing-page
 .landing-page
-   .landing-page__wrapper
+  .landing-page__wrapper
     h1.landing-page__title=fullName
     h2.landing-page__sub-title=jobTitle
+    ul.landing-page__social
+      each social, key in socialList
+        li.landing-page__social-item
+          label.landing-page__social-label(for=``)
+          span(class=`my-cv__icon--${social.icon}`)
