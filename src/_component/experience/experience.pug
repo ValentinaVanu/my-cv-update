@@ -1,0 +1,31 @@
+-
+  var header = '#Experience'
+  var experienceList = [
+    {
+      title: 'Junior Front-End Developer',
+      date: '2016 Sept - Present',
+      company: 'Smart Yii',
+      responsabilityList: [
+        'Build client payment interface using HTML5/CSS3 out of Illustrator / Photoshop templates',
+        'Write and maintain websites',
+        'Using latest development tools to quickly and efficiently develop client optimised websites which can achieve a perfect Google Page Speed score',
+        'Analyse use needs to determine technical requirements',
+        'Create HTML structure with SEO in mind',
+        'Meeting clients',
+        'Discussing clients’ requirements and proposed solutions'
+      ]
+    }
+  ]
+#experience
+.experience
+  .experience__header=header
+  each experience, key in experienceList
+    label.experience__title(for=`experience-id-${key}`)=experience.title
+    input.experience__input(type="radio", name="the-same", id=`experience-id-${key}`)
+    .experience__details
+      .experience__top
+        .experience__date=experience.date
+        .experience__company=experience.company
+      .experience__list
+        each responsability in experience.responsabilityList
+          .experience__responsability=responsability
